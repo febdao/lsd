@@ -5,12 +5,12 @@
  * Settings specific to a site in sites/*
  */
 
-$is_acquia = (bool) isset($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : NULL;
-
-// Settings for acquia cloud.
-if ($is_acquia) {
-  include $app_root . '/sites/default/settings/settings.acquia.php';
-}
+//$is_acquia = (bool) isset($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : NULL;
+//
+//// Settings for acquia cloud.
+//if ($is_acquia) {
+//  include $app_root . '/sites/default/settings/settings.acquia.php';
+//}
 
 // Settings for platform.sh.
 $is_platform = isset($_ENV['PLATFORM_APP_DIR']);
@@ -34,6 +34,7 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
-$settings['file_private_path'] = 'sites/default/files/private';
+// This is for Platform.sh. Change this in settings.local.php for local development if needed.
+$settings['file_private_path'] = '../private';
 
 $config_directories['sync'] = '../config/default';

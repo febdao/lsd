@@ -6,6 +6,7 @@
 
 if (isset($_ENV['PLATFORM_APP_DIR'])) {
   $relationships = getenv('PLATFORM_RELATIONSHIPS');
+
   $relationships = json_decode(base64_decode($relationships), true);
   foreach ($relationships['database'] as $endpoint) {
     if (empty($endpoint['query']['is_master'])) {
@@ -22,10 +23,7 @@ if (isset($_ENV['PLATFORM_APP_DIR'])) {
   }
 
   $settings['trusted_host_patterns'] = [
-    '^master-7rqtwti-7urzfbygj4ccg\.eu\.platform\.sh',
+    '^master-7rqtwti-kax3uftyymou2\.au\.platformsh\.site',
   ];
 
-  $settings['api_ai_webhook_developer_token'] = 'd3ce75da068a4c74b64e65d5c111dfe3';
-
 }
-
