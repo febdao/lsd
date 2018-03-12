@@ -18,11 +18,12 @@ removed, but they are unlikely to conflict with the govCMS Drupal 8 hosting plat
 
 ## Dev setup
 
+Currently developing the theme locally. Updates to come.
+
  - `git clone https://github.com/TodayDesign/dfat-innovation`
  - `cd dfat-innovation`
  - `composer install`
  - `vagrant up`
  - `composer setup-local-settings`
  - `drush @vm site-install govcms`
- 
- 
+ - `drush @vm user-login`
