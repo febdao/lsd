@@ -22,4 +22,7 @@ removed, but they are unlikely to conflict with the govCMS Drupal 8 hosting plat
  - `cd dfat-innovation`
  - `composer install`
  - `vagrant up`
- - 
+ - `composer setup-local-settings`
+ - `drush @vm site-install govcms`
+ 
+ 

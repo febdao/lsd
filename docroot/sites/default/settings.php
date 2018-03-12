@@ -17,4 +17,4 @@ include $app_root . '/' . $site_path . '/settings/settings.default.php';
 if (file_exists($app_root . '/' . $site_path . '/settings/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings/settings.local.php';
 }
-$settings['install_profile'] = 'minimal';
+$settings['install_profile'] = 'govcms';
