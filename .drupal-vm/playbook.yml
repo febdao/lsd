@@ -4,10 +4,17 @@
   become: true
   tasks:
 
-  - file: path=/tmp/xdebug.log state=file owner=vagrant group=vagrant
-
   - name: Install some tools
     apt: name={{item}} state=installed
     with_items:
       - lynx
       - jq
+
+  - name: Avoid xdebug warnings
+    copy:
+      content: ""
+      dest: /tmp/xdebug.log
+      force: yes
+      group: vagrant
+      owner: vagrant
+      mode: 0755

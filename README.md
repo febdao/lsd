@@ -16,7 +16,16 @@ There are other non-runtime components, like Drupal-VM for local development, an
 some standard test/build tools. These are not critical to govCMS and could be
 removed, but they are unlikely to conflict with the govCMS Drupal 8 hosting platform.
 
-## Dev setup
+## Local dependencies
+
+ - Local PHP, git and [Composer](https://getcomposer.org/)
+ - global [drush wrapper](https://github.com/drush-ops/drush-launcher/blob/master/README.md)
+ - [vagrant](https://www.vagrantup.com/downloads.html)
+ - [virtualBox](https://www.virtualbox.org/wiki/Downloads)
+ - vagrant-hostupdater plugin: `vagrant plugin install vagrant-hostsupdater`
+ - vagrant-auto_network: `vagrant plugin install vagrant-auto_network`
+ 
+ ## Dev setup
 
 Currently developing the theme locally. Updates to come.
 
@@ -27,3 +36,11 @@ Currently developing the theme locally. Updates to come.
  - `composer setup-local-settings`
  - `drush @vm site-install govcms`
  - `drush @vm user-login`
+
+## Platform.sh access
+
+(In progress)
+
+Login to platform locally with the devops user.
+`platform auth:password-login`
+
