@@ -34,6 +34,7 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
-$settings['file_private_path'] = 'sites/default/files/private';
+// This is for Platform.sh. Change this in settings.local.php for local development if needed.
+$settings['file_private_path'] = '../private';
 
 $config_directories['sync'] = '../config/default';
