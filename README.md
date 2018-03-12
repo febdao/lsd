@@ -1,20 +1,26 @@
-# govCMS8 Composer Project Installer
-<img src="https://www.drupal.org/files/styles/grid-3/public/project-images/govcms8.png" alt="govCMS8 logo" align="right"/>
+# DFAT Innovation.
 
-[![Build Status](https://travis-ci.org/govCMS/govCMS8-project.svg?branch=1.x)](https://travis-ci.org/govCMS/govCMS8-project)
+This is a Drupal 8 project which is based on govCMS distribution.
 
-govCMS8 is the Drupal 8-specific version of the govCMS distribution.
+## govCMS compatibility
 
-[govCMS](https://www.govcms.gov.au) is an open source web content management and hosting service, based on Drupal and developed to help agencies create modern, affordable and responsive websites, whilst making it easier to collaborate and innovate. govCMS also helps reduce the technology and compliance burden on government agencies.  govCMS is mananged by the Australian Government Department of Finance.
+DFAT have govCMS projects on Drupal 7, so we're mindful of govCMS compatibility,
+hence the use of the distribution.
 
-## Installation
+So to stay compliant with a hypothetical govCMS Drupal 8 SaaS platform, this project
+does not add any additional modules. It simply includes `"govcms/govcms": "~1.0"` in
+composer.json. The outcome is a project structured the same was as if you followed
+the installation instructions on https://github.com/govCMS/govCMS8.
 
-This repository is for inclusion as part of a composer create-project installation only.
+There are other non-runtime components, like Drupal-VM for local development, and 
+some standard test/build tools. These are not critical to govCMS and could be
+removed, but they are unlikely to conflict with the govCMS Drupal 8 hosting platform.
 
-Complete installation instructions are available at the main govCMS8 repository https://github.com/govCMS/govCMS8
+## Dev setup
 
-### Quick Start
-
-Composer will create a new directory called MY_PROJECT containing a docroot directory with a full govCMS code base therein.
-
-    composer create-project govcms/govcms8-project MY_PROJECT
+ - `git clone https://github.com/TodayDesign/dfat-innovation`
+ - `cd dfat-innovation`
+ - `composer install`
+ - `vagrant up`
+ - `composer install-worksafe` # Sets up settings files and installs a stub db.
+ 
