@@ -41,6 +41,12 @@ Currently developing the theme locally. Updates to come.
 
 (In progress)
 
+Add your key to the project by logging into Platform.sh with the devops
+user (see Team Password).
+
+If you are using a custom key path (not id_rsa) then run:
+`ssh-add path-to-your-key`
+
 Login to platform locally with the devops user.
 `platform auth:password-login`
 
