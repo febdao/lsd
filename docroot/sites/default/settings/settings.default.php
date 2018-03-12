@@ -5,12 +5,12 @@
  * Settings specific to a site in sites/*
  */
 
-$is_acquia = (bool) isset($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : NULL;
-
-// Settings for acquia cloud.
-if ($is_acquia) {
-  include $app_root . '/sites/default/settings/settings.acquia.php';
-}
+//$is_acquia = (bool) isset($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : NULL;
+//
+//// Settings for acquia cloud.
+//if ($is_acquia) {
+//  include $app_root . '/sites/default/settings/settings.acquia.php';
+//}
 
 // Settings for platform.sh.
 $is_platform = isset($_ENV['PLATFORM_APP_DIR']);
