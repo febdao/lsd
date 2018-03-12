@@ -1,0 +1,216 @@
+// Utils
+@mixin container {
+  max-width: $container-width;
+  margin-left: $content-padding-mobile;
+  margin-right: $content-padding-mobile;
+  @include large-up {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@mixin xsmall-up {
+  @media screen and (min-width: $breakpoint-xsmall) {
+    @content;
+  }
+}
+
+@mixin xsmall-down {
+  @media screen and (max-width: $breakpoint-xsmall - 1) {
+    @content;
+  }
+}
+
+@mixin small-up {
+  @media screen and (min-width: $breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin small-down {
+  @media screen and (max-width: $breakpoint-small - 1) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media screen and (min-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin medium-down {
+  @media screen and (max-width: $breakpoint-medium - 1) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media screen and (min-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin large-down {
+  @media screen and (max-width: $breakpoint-large - 1) {
+    @content;
+  }
+}
+
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+}
+
+//
+// Mixin Font-face: https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+// (Missing woff2 because using free Icomoon account)
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+// Grid
+@mixin grid-row {
+  @supports(display: grid) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    @include medium-up {
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+    }
+  }
+}
+
+@mixin grid-columns($xs: null, $sm: null, $md: null, $lg: null) {
+  @if($xs == null) { $xs: 12 }
+  @if($sm == null) { $sm: $xs }
+  @if($md == null) { $md: $sm }
+  @if($lg == null) { $lg: $md }
+  @supports(display: grid) {
+    grid-column-start: span $xs;
+    @include small-up {
+      grid-column-start: span $sm;
+    }
+    @include medium-up {
+      grid-column-start: span $md;
+    }
+    @include large-up {
+      grid-column-start: span $lg;
+    }
+  }
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.columns {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+
+  &[class*='small-'] {
+    float: left;
+    clear: none;
+  }
+
+  &[class*='medium-'] {
+    @include medium-up {
+      float: left;
+      clear: none;
+    }
+  }
+
+  &[class*='large-'] {
+    @include large-up {
+      float: left;
+      clear: none;
+    }
+  }
+
+  &.small-12,
+  &.medium-12,
+  &.large-12 {
+    float: none;
+    clear: both;
+  }
+}
+
+@for $i from 1 to 12 {
+  .small {
+    &-#{$i} {
+      width: $i/12 * 100%;
+    }
+  }
+}
+
+@for $i from 1 to 12 {
+  @include medium-up {
+    .medium {
+      &-#{$i} {
+        width: $i/12 * 100%;
+      }
+    }
+  }
+}
+
+@for $i from 1 to 12 {
+  @include large-up {
+    .large {
+      &-#{$i} {
+        width: $i/12 * 100%;
+      }
+    }
+  }
+}

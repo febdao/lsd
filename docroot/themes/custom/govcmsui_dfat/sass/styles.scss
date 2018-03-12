@@ -1,0 +1,26 @@
+// Base
+@import 'includes/vars';
+
+// // --- UI-Kit Bootstrap styles -----------------------------
+@import '../../../contrib/govcms8_ui/src/sass/uikit-bootstrap/mixins';
+@import '../../../contrib/govcms8_ui/src/sass/uikit-bootstrap/global';
+@import '../../../contrib/govcms8_ui/src/sass/uikit-bootstrap/typography';
+@import '../../../contrib/govcms8_ui/src/sass/uikit-bootstrap/elements';
+@import '../../../contrib/govcms8_ui/src/sass/uikit-bootstrap/extra-elements';
+@import '../../../contrib/govcms8_ui/src/sass/uikit-bootstrap/responsive';
+
+// --- govCMS-UI styles -----------------------------
+@import "../../../contrib/govcms8_ui/src/sass/govcmsui";
+@import "../../../contrib/govcms8_ui/src/sass/govcmsui-responsive";
+@import "../../../contrib/govcms8_ui/src/sass/govcmsui-print";
+@import "../../../contrib/govcms8_ui/src/sass/govcmsui-admin";
+
+
+// --- govCMS-DFAT theme specific styles -----------------------------
+@import 'includes/mixins';
+@import 'includes/font';
+
+@import 'global/reset';
+@import 'global/drupal';
+@import 'global/form';
+@import 'global/scaffolding';
