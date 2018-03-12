@@ -50,3 +50,5 @@ If you are using a custom key path (not id_rsa) then run:
 Login to platform locally with the devops user.
 `platform auth:password-login`
 
+Push changes to Platform.
+`platform push`
