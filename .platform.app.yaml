@@ -26,7 +26,7 @@ disk: 2048
 # directory paths, relative to the application root. The values are strings such as
 # 'shared:files/PATH', where PATH is a relative path under the mount's source directory.
 mounts:
-    '/web/sites/default/files': 'shared:files/files'
+    '/docroot/sites/default/files': 'shared:files/files'
     '/tmp': 'shared:files/tmp'
     '/private': 'shared:files/private'
     '/.drush': 'shared:files/.drush'
@@ -41,7 +41,7 @@ hooks:
     # The deploy hook runs after your application has been deployed and started.
     deploy: |
       set -e
-      cd web
+      cd docroot
       drush -y cache-rebuild
       drush -y updatedb
       drush -y config-import
@@ -55,7 +55,7 @@ web:
             # The folder from which to serve static assets, for this location.
             #
             # This is a filesystem path, relative to the application root.
-            root: 'web'
+            root: 'docroot'
 
             # How long to allow static assets from this location to be cached.
             #
@@ -95,7 +95,7 @@ web:
             allow: true
             expires: 5m
             passthru: '/index.php'
-            root: 'web/sites/default/files'
+            root: 'docroot/sites/default/files'
 
             # Do not execute PHP scripts.
             scripts: false
@@ -109,4 +109,4 @@ web:
 crons:
     drupal:
         spec: '*/20 * * * *'
-        cmd: 'cd web ; drush core-cron'
+        cmd: 'cd docroot ; drush core-cron'
