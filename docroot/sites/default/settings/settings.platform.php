@@ -6,6 +6,9 @@
 
 if (isset($_ENV['PLATFORM_APP_DIR'])) {
   $relationships = getenv('PLATFORM_RELATIONSHIPS');
+
+  print_r($relationships);
+
   $relationships = json_decode(base64_decode($relationships), true);
   foreach ($relationships['database'] as $endpoint) {
     if (empty($endpoint['query']['is_master'])) {
