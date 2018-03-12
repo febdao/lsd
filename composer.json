@@ -1,0 +1,146 @@
+{
+  "name": "today/dfat-innovation",
+  "description": "DFAT Innovation on govCMS Drupal 8",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Today",
+      "email": "devops@today.design",
+      "homepage": "https://today.design",
+      "role": "Application design and development"
+    },
+    {
+      "name": "govCMS Team",
+      "homepage": "https://www.govcms.gov.au",
+      "role": "govCMS distribution development"
+    }
+  ],
+    "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "asset-packagist": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    "simesy": {
+      "type": "vcs",
+      "url": "https://github.com/simesy/composer-locator"
+    }
+  },
+  "require": {
+    "govcms/govcms": "~1.0",
+    "composer/installers": "^1.2",
+    "cweagans/composer-patches": "^1.6.0",
+    "drupal-composer/drupal-scaffold": "^2.2",
+    "oomphinc/composer-installers-extender": "^1.1"
+  },
+  "require-dev": {
+    "behat/mink": "~1.7",
+    "behat/mink-goutte-driver": "~1.2",
+    "drupal/coder": "^8.2",
+    "drupal/devel": "1.x-dev",
+    "drupal/drupal-extension": "v3.3.0",
+    "geerlingguy/drupal-vm": "~4.3",
+    "jcalderonzumba/gastonjs": "~1.0.2",
+    "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+    "integratedexperts/robo-git-artefact": "~0.2.1",
+    "integratedexperts/behat-format-progress-fail": ">=0.2.1",
+    "integratedexperts/behat-screenshot": ">=0.6.1",
+    "mikey179/vfsstream": "~1.2",
+    "symfony/css-selector": "~2.8|~3.0",
+    "phpunit/phpunit": "~7"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "classmap": [
+      "scripts/composer/ScriptHandler.php",
+      "scripts/composer/"
+    ]
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests"
+    ]
+  },
+  "scripts": {
+    "dependency-cleanup": [ "Drupal\\composer\\ScriptHandler::dependencyCleanup" ],
+    "drupal-scaffold": "Drupal\\DrupalScaffold\\Plugin::scaffold",
+    "post-install-cmd": [ "Drupal\\composer\\ScriptHandler::buildScaffold" ],
+    "post-update-cmd": [ "Drupal\\composer\\ScriptHandler::buildScaffold" ],
+    "canonical-cex": [
+      "git status",
+      "echo 'Note: the canonical site is current Acquia test (staging).'",
+      "@sync-test",
+      "./vendor/bin/drush --alias-path=./drush @vm cache-rebuild",
+      "./vendor/bin/drush --alias-path=./drush @vm updatedb -v -y",
+      "./vendor/bin/drush --alias-path=./drush @vm config-export -y"
+    ],
+    "git-hooks": [
+      "ln -s ../../scripts/git/pre-commit.sh .git/hooks/pre-commit"
+    ]
+  },
+  "scripts-descriptions": {
+    "canonical-cex": "** Custom: Export config fromcanonical site to code.",
+    "git-hooks": "** Custom: Put git hooks into place."
+  },
+  "extra": {
+    "installer-types": ["bower-asset", "npm-asset"],
+    "installer-paths": {
+      "docroot/core": ["type:drupal-core"],
+      "docroot/libraries/{$name}/": [
+        "type:drupal-library",
+        "vendor:bower-asset",
+        "vendor:npm-asset"
+      ],
+      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+      "docroot/profiles/{$name}": ["type:drupal-profile"],
+      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/contrib/{$name}": ["type:drupal-drush"]
+    },
+    "drupal-scaffold": {
+      "source": "http://cgit.drupalcode.org/drupal/plain/{path}?h={version}",
+      "excludes": [
+        "sites/default/default.services.yml",
+        "sites/default/default.settings.php",
+        "sites/example.settings.local.php",
+        "sites/example.sites.php",
+        "sites/development.services.yml"
+      ],
+      "omit-defaults": false
+    },
+    "enable-patching": true,
+    "patches": {
+      "league/oauth2-server": {
+        "Allow Acquia 440 permissions for key file": "https://www.drupal.org/files/issues/2915576-crypt-key-allow-440-do-not-test.patch"
+      },
+      "drupal/youtube": {
+        "Error when showing youtube thumbnail": "https://www.drupal.org/files/issues/2937922-to-url-fails-on-paragraph.patch"
+      },
+      "drupal/jsonapi_extras": {
+        "Provide aliased version of uri in Link json": "https://www.drupal.org/files/issues/aliased-link-enhancer-2942851-2.patch"
+      },
+      "drupal/simple_oauth": {
+        "Interface errors, @see http://drupal.org/node/2941522": "https://www.drupal.org/files/issues/abstract_method_fix.patch.txt"
+      },
+      "drupal/fieldable_path": {
+        "Fix pathauto 1.1 issue.": "https://www.drupal.org/files/issues/2949926-2-replace-pathauto-entity-update.diff"
+      },
+      "drupal/core": {
+        "Handling race condition when youtube module doens't have local files": "https://www.drupal.org/files/issues/valid-object-or-string-2849413-2-d8.patch"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "secure-http": true,
+    "preferred-install": {
+      "*": "auto"
+    }
+  }
+}

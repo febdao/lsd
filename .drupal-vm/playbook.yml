@@ -1,0 +1,11 @@
+# Additional Ansible playbook on top of what Drupal-VM provides.
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Install some tools
+    apt: name={{item}} state=installed
+    with_items:
+      - lynx
+      - jq

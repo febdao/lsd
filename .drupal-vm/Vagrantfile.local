@@ -1,0 +1,10 @@
+# Drupal-VM called this Vagrantfile so we can call our own playbooks.
+
+config.ssh.forward_agent = true
+
+config.vm.provision :ansible do |ansible|
+  ansible.extra_vars = {
+    host_user:  ENV['USER']
+  }
+  ansible.playbook = "#{host_config_dir}/playbook.yml"
+end
