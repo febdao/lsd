@@ -4,6 +4,8 @@
   become: true
   tasks:
 
+  - file: path=/tmp/xdebug.log state=file owner=vagrant group=vagrant
+
   - name: Install some tools
     apt: name={{item}} state=installed
     with_items:

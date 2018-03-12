@@ -42,6 +42,7 @@
     "drupal/coder": "^8.2",
     "drupal/devel": "1.x-dev",
     "drupal/drupal-extension": "v3.3.0",
+    "drush/drush": "~8.1.12",
     "geerlingguy/drupal-vm": "~4.3",
     "jcalderonzumba/gastonjs": "~1.0.2",
     "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
@@ -83,6 +84,9 @@
     ],
     "git-hooks": [
       "ln -s ../../scripts/git/pre-commit.sh .git/hooks/pre-commit"
+    ],
+    "setup-local-settings": [
+      "cp docroot/sites/default/settings/example.settings.local.php docroot/sites/default/settings/settings.local.php "
     ]
   },
   "scripts-descriptions": {

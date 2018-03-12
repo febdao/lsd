@@ -22,5 +22,4 @@ removed, but they are unlikely to conflict with the govCMS Drupal 8 hosting plat
  - `cd dfat-innovation`
  - `composer install`
  - `vagrant up`
- - `composer install-worksafe` # Sets up settings files and installs a stub db.
- 
+ - 
