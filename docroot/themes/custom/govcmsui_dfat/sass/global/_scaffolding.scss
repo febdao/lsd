@@ -38,3 +38,25 @@
 .text-right {
   text-align: right;
 }
+
+.text {
+  &--white {
+    &,
+    a {
+      color: white;
+    }
+  }
+}
+.bg {
+  &--yellow {
+    background-color: $yellow;
+  }
+
+  &--gray {
+    background-color: $grey-light;
+  }
+
+  &--dark {
+    background-color: $grey-dark;
+  }
+}

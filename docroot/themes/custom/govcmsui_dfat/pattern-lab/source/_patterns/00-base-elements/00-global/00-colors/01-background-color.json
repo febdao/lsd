@@ -1,12 +1,22 @@
 {
   "bgLists": [
     {
-      "label": "Light backgrounds",
+      "label": "Yellow backgrounds",
       "type": "normal",
       "items": [
         {
-          "label": "bg--white text--dark",
-          "code": "#ffffff"
+          "label": "bg--yellow",
+          "code": "#FFD44D"
+        }
+      ]
+    },
+    {
+      "label": "Gray backgrounds",
+      "type": "normal",
+      "items": [
+        {
+          "label": "bg--gray",
+          "code": "#EBEBEB"
         }
       ]
     },
@@ -15,8 +25,8 @@
       "type": "normal",
       "items": [
         {
-          "label": "bg--primary text--white",
-          "code": "#112146"
+          "label": "bg--dark text--white",
+          "code": "#272727"
         }
       ]
     }

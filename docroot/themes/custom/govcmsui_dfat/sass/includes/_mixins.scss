@@ -143,74 +143,58 @@
   }
 }
 
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
-
-  &:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+@mixin SSPro-light() {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
 }
 
-.columns {
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
-  clear: both;
-
-  &[class*='small-'] {
-    float: left;
-    clear: none;
-  }
-
-  &[class*='medium-'] {
-    @include medium-up {
-      float: left;
-      clear: none;
-    }
-  }
-
-  &[class*='large-'] {
-    @include large-up {
-      float: left;
-      clear: none;
-    }
-  }
-
-  &.small-12,
-  &.medium-12,
-  &.large-12 {
-    float: none;
-    clear: both;
-  }
+@mixin SSPro-regular() {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
 }
 
-@for $i from 1 to 12 {
-  .small {
-    &-#{$i} {
-      width: $i/12 * 100%;
-    }
-  }
+@mixin SSPro-semibold() {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
 }
 
-@for $i from 1 to 12 {
+@mixin type-heading {
+  font-weight: $font-weight-bold;
+  font-family: $font-family-heading;
+}
+
+@mixin h1-size {
+  font-size: 26px;
+  line-height: 32px;
   @include medium-up {
-    .medium {
-      &-#{$i} {
-        width: $i/12 * 100%;
-      }
-    }
+    font-size: 46px;
+    line-height: 56px;
   }
 }
 
-@for $i from 1 to 12 {
-  @include large-up {
-    .large {
-      &-#{$i} {
-        width: $i/12 * 100%;
-      }
-    }
+@mixin h2-size {
+  font-size: 23px;
+  line-height: 28px;
+  @include medium-up {
+    font-size: 32px;
+    line-height: 35px;
+  }
+}
+
+@mixin h3-size {
+  font-size: 23px;
+  line-height: 28px;
+  @include medium-up {
+    font-size: 32px;
+    line-height: 35px;
+  }
+}
+
+@mixin h4-size {
+  font-size: 15px;
+  line-height: 24px;
+  @include medium-up {
+    font-size: 18px;
+    line-height: 26px;
   }
 }

@@ -1,0 +1,44 @@
+body {
+  color: $grey-black;
+  text-rendering: geometricPrecision;
+}
+
+p, ul, ol, blockquote {
+  margin-bottom: $spacing-l;
+}
+
+li {
+  margin-bottom: $spacing-s;
+}
+
+h1, h2, h3, h4, h5, h6  {
+  @include type-heading;
+}
+
+h1 {
+  @include h1-size;
+}
+
+h2 {
+  @include h2-size;
+  margin-bottom: $spacing-xl;
+}
+
+h3 {
+  @include h3-size;
+  margin-bottom: $spacing-l;
+}
+
+h4 {
+  @include h4-size;
+  margin-bottom: $spacing-l;
+}
+
+a {
+  color: $primary;
+
+  &[href^='mailto'] {
+    // Long email addresses shouldn't break layout
+    word-break: break-all;
+  }
+}

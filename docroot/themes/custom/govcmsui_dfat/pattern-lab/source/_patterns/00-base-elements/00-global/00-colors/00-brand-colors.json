@@ -7,12 +7,16 @@
           "with": {
             "colors": [
               {
-                "variable": "$primary-color",
-                "code": "#112146"
+                "variable": "$text-color",
+                "code": "#231F20"
               },
               {
-                "variable": "$text-color",
-                "code": "#000000"
+                "variable": "$gray-color",
+                "code": "rgba(0,0,0,.4)"
+              },
+              {
+                "variable": "$yellow",
+                "code": "#FFD44D"
               }
             ]
           }

@@ -9,12 +9,15 @@ $primary-dark:					#115361;							 // as above but darker
 $primary-darker:				#043751;							 // as above but super dark, use sparingly
 
 // Four shades of grey:
-$grey-light:						#f0f3f5;							 // faint background colour
+$white:                 #ffffff;
+$black:                 #000000;
+$grey-light:						#EBEBEB;							 // CTA background colour
 $grey-border:						#bbb;									 // a lighter grey mainly for borders for borders
 $grey-medium:						#8b8b8b;							 // lightest a11y compliant for large text
-$grey:									#6e6e6e;							 // lightest a11y compliant body text
-$grey-dark:							#313131;							 // near black text
-$grey-black:						#212121;							 // near black text
+$grey-dark:							#272727;							 // Footer background color
+$grey-black:						#231F20;							 // Text color
+$grey:									rgba($black, .4);      // lightest a11y compliant body text
+$yellow: 								#FFD44D;
 
 // Status colours
 $success:								#007554;							 // done
@@ -44,7 +47,9 @@ $max-readable-width:		48em;										// for better readability
 $font-serif:						'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
 $font-sans-serif:				'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
 $font-monospace:				'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
-$font-family-base:			$font-sans-serif;
+$font-sourcesans-pro:		'Source Sans Pro', sans-serif;
+$font-family-base:			$font-sourcesans-pro;
+$font-family-heading:		$font-sourcesans-pro;
 
 // Using system fonts:
 // https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
@@ -53,11 +58,10 @@ $font-sans-serif-system: -apple-system, BlinkMacSystemFont,
 												 'Ubuntu', 'Cantarell', 'Fira Sans',
 												 'Droid Sans', 'Helvetica Neue', 'Open Sans', sans-serif;
 // I like the idea but can't bring myself to add yet another inconsistancy just yet..
-$font-family-base:		$font-sans-serif-system;
 
 // Font weights:
 $font-weight-normal:		400;
-$font-weight-bold:			700;
+$font-weight-bold:			600;
 
 // Leading/line-height:
 $base-leading:					1.6;
