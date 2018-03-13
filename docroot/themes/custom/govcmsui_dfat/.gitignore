@@ -2,15 +2,14 @@
 logs
 *.log
 
-.DS_Store
-
 #Ignore files related to Sublime Text
 *.sublime-project
 *.sublime-workspace
 
 # Ignore sass cache
-.sass-cache/
-node_modules/
+.npm/.sass-cache/
+.npm/node_modules
+.npm/bower_components/
 
 # Ignore Vendor folder
 vendor/
