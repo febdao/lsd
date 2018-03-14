@@ -17,7 +17,8 @@ if (isset($_ENV['PLATFORM_APP_DIR'])) {
       'database' => $endpoint['path'],
       'username' => $endpoint['username'],
       'password' => $endpoint['password'],
-      'host' => "{$endpoint['host']}:{$endpoint['port']}",
+      'host' => $endpoint['host'],
+      'port' => $endpoint['port'],
       'prefix' => '',
     );
   }

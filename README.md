@@ -52,3 +52,4 @@ Login to platform locally with the devops user.
 
 Push changes to Platform.
 `platform push`
+    
