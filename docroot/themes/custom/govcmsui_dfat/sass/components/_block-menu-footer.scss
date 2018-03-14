@@ -1,0 +1,10 @@
+.block-menu-footer {
+  &__item {
+    display: inline-block;
+    margin-right: 20px;
+    text-transform: capitalize;
+    @include medium-up {
+      margin-right: 40px;
+    }
+  }
+}

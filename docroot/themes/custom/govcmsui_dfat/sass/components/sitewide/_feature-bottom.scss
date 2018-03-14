@@ -1,0 +1,9 @@
+.feature-bottom {
+  padding-top: 240px;
+  padding-bottom: 25px;
+
+  @include medium-up {
+    padding-top: 340px;
+    padding-bottom: 75px;
+  }
+}

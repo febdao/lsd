@@ -1,0 +1,21 @@
+.header {
+  &__left,
+  &__right {
+    max-width: 40%;
+  }
+
+  &__left {
+    float: left;
+  }
+
+  &__right {
+    float: right;
+  }
+
+  &__sublogo {
+    @include medium-down {
+      margin-top: 10%;
+      max-width: 102px;
+    }
+  }
+}

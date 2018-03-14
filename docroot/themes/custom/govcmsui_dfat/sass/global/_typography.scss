@@ -1,6 +1,7 @@
 body {
   color: $grey-black;
   text-rendering: geometricPrecision;
+  font-size: 18px;
 }
 
 p, ul, ol, blockquote {
@@ -17,28 +18,79 @@ h1, h2, h3, h4, h5, h6  {
 
 h1 {
   @include h1-size;
+  font-weight: 300;
 }
 
 h2 {
   @include h2-size;
-  margin-bottom: $spacing-xl;
+  font-weight: 300;
+  margin-bottom: 27px;
 }
 
 h3 {
   @include h3-size;
+  font-weight: 400;
   margin-bottom: $spacing-l;
 }
 
 h4 {
   @include h4-size;
+  font-weight: 600;
   margin-bottom: $spacing-l;
 }
 
 a {
+  border: none !important;
+  background: none !important;
   color: $primary;
+  text-decoration: underline;
 
   &[href^='mailto'] {
     // Long email addresses shouldn't break layout
     word-break: break-all;
   }
+}
+
+
+// Base for a link:
+a {
+	color: darken( $primary-highlight, 15% );
+	&:active,
+	&:focus,
+	&:hover {
+		text-decoration: none !important;
+	}
+}
+// Your average content link (and page footer)
+body > div,
+body > main,
+body > footer {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	h4,
+	h5,
+	h6,
+	p,
+	small,
+	ul,
+	table,
+	span,
+	div,
+	ol {
+		a {
+			border-bottom: none;
+			padding: 0;
+			text-decoration: underline;
+			&:hover,
+			&:focus,
+			&:active {
+				text-decoration: none;
+        color: inherit;
+			}
+		}
+	}
 }

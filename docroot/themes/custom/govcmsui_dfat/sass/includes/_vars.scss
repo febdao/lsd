@@ -88,6 +88,6 @@ $content-padding-mobile: 20px !default;
 
 // Breakpoints
 $breakpoint-xsmall: 400px !default;
-$breakpoint-small: 550px !default;
-$breakpoint-medium: 1025px !default;
-$breakpoint-large: $container-width + ($content-padding-mobile * 2) !default;
+$breakpoint-small: 576px !default;
+$breakpoint-medium: 768px !default;
+$breakpoint-large: 992px !default;

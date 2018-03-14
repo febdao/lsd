@@ -11,9 +11,23 @@
   border: 0 !important;
 }
 
+.clearfix {
+  &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
 
-.container {
-  @include container;
+.dfat-icon {
+  @include SSScocial();
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+}
+
+.reset-list {
+  @include reset-list;
 }
 
 .grid-row {

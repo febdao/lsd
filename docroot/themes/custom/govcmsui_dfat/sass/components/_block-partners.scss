@@ -1,0 +1,17 @@
+.block-partners {
+  margin-bottom: 25px;
+  @include medium-up {
+    margin-bottom: 95px;
+  }
+
+  &__items {
+    margin-bottom: 0;
+  }
+
+  .block-title {
+    @include medium-up {
+      margin-top: 75px;
+      margin-bottom: 45px;
+    }
+  }
+}

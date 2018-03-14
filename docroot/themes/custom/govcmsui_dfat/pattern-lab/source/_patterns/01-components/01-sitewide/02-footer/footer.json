@@ -1,1 +1,56 @@
-{}
+{
+  "social": {
+    "title": "Follow us",
+    "items": [
+      {
+        "uri": "http://twitter.com",
+        "icon": "twitter",
+        "name": "Twitter"
+      },
+      {
+        "uri": "http://instagram.com",
+        "icon": "instagram",
+        "name": "Instagram"
+      },
+      {
+        "uri": "http://facebook.com",
+        "icon": "facebook",
+        "name": "Facebook"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Key partners",
+    "items": [
+      {
+        "classes": "col-6 col-md-3 offset-md-1",
+        "uri": "http://partner1.com",
+        "name": "Partner 1",
+        "image": "/images/innova-logo.svg"
+      },
+      {
+        "classes": "col-6 col-md-2 order-md-last",
+        "uri": "http://partner3.com",
+        "name": "Partner 3",
+        "image": "/images/aid-logo.svg"
+      },
+      {
+        "classes": "col-md-5",
+        "uri": "http://partner2.com",
+        "name": "Partner 2",
+        "image": "/images/dfat-logo.svg"
+      }
+    ]
+  },
+  "copyRight": "Copyright 2018 Scaling Frontier Innovation<br/> Created by the Department of Foreign Affairs and Trade",
+  "menuFooter": [
+    {
+      "uri": "/contact",
+      "name": "contact"
+    },
+    {
+      "uri": "/terms",
+      "name": "terms"
+    }
+  ]
+}
