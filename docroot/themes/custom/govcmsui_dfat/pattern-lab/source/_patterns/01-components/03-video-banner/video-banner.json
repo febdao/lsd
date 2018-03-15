@@ -1,0 +1,7 @@
+{
+  "featureVideo": {
+    "title": "This is title of video",
+    "coverImage": "/images/video_cover.png",
+    "uri": "https://www.youtube.com/watch?v=yU7O5euSmzc"
+  }
+}

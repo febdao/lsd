@@ -1,0 +1,80 @@
+.feature-video {
+  position: relative;
+  z-index: 1;
+
+  &:after,
+  &:before {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    z-index: -1;
+    content: ""
+  }
+
+  @include medium-up {
+    &:after {
+      background-image: url(../images/video_cover_decor.png);
+      background-position: right top;
+      bottom: 0;
+      right: 0;
+      top: -43px;
+      width: 25%;
+    }
+  }
+
+  @include medium-down {
+    padding-top: 23px;
+    padding-bottom: 32px;
+
+    &:after {
+      width: 25%;
+      height: 23px;
+      background-size: 100% 100%;
+      background-image: url(../images/decor-bar.png);
+      top: 0;
+      right: 0;
+    }
+    &:before {
+      bottom: 0;
+      left: 0;
+      background-size:  100% 100%;
+      height: 32px;
+      width: 75%;
+      background-image: url(../images/decor-bar-revert.png);
+    }
+  }
+
+  &__cover {
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      background: transparent url("../images/play-icon.svg") no-repeat center;
+      background-size: 42px 42px;
+      content: "";
+      height: 44px;
+      left: 50%;
+      margin-left: -22px;
+      margin-top: -22px;
+      position: absolute;
+      top: 50%;
+      transform: scale(1);
+      transition: all 0.2s ease-in;
+      width: 44px;
+
+      @include medium-up {
+        height: 66px;
+        margin-left: -33px;
+        margin-top: -33px;
+        width: 66px;
+        background-size: 64px 64px;
+      }
+    }
+
+    &:hover {
+      &:after {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
