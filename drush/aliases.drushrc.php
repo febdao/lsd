@@ -6,6 +6,14 @@
  * @see example.aliases.drushrc.php.
  */
 
+$aliases['master'] = array (
+  'root' => '/app/docroot',
+  'platformsh-cli-auto-remove' => true,
+  'uri' => 'https://master-7rqtwti-kax3uftyymou2.au.platformsh.site/',
+  'remote-host' => 'ssh.au.platform.sh',
+  'remote-user' => 'kax3uftyymou2-master-7rqtwti--drupal',
+);
+
 $aliases['vm'] = array(
   'uri' => 'dfat-innovation.vm',
   'root' => '/var/www/drupalvm/docroot',
