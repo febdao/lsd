@@ -1,0 +1,52 @@
+{
+  "values": [
+    {
+      "title": "Bridging the funding gap",
+      "body": "Globally, total aid budgets fall USD2.5 trillion short of the funds needed to achieve the Sustainable Development Goals (SDGs).",
+      "image": {
+        "include()": {
+          "pattern": "base-elements-image",
+          "with": {
+            "image": {
+              "src": "/images/bridging.svg",
+              "alt": "DFAT image"
+            }
+          },
+          "only": true
+        }
+      }
+    },
+    {
+      "title": "Doing business",
+      "body": "The ‘Impact Investing’ market, private funds for social impact businesses, is growing, but the Indo-Pacific share in these investments is just 6%.",
+      "image": {
+        "include()": {
+          "pattern": "base-elements-image",
+          "with": {
+            "image": {
+              "src": "/images/doing.svg",
+              "alt": "DFAT image"
+            }
+          },
+          "only": true
+        }
+      }
+    },
+    {
+      "title": "Delivering impact",
+      "body": "Our program is strengthening the ecosystem around social enterprise and impact investment to help realise potential in the Asia-Pacific.",
+      "image": {
+        "include()": {
+          "pattern": "base-elements-image",
+          "with": {
+            "image": {
+              "src": "/images/delivering.svg",
+              "alt": "DFAT image"
+            }
+          },
+          "only": true
+        }
+      }
+    }
+  ]
+}

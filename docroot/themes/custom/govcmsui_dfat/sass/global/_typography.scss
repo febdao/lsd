@@ -1,7 +1,11 @@
 body {
   color: $grey-black;
   text-rendering: geometricPrecision;
-  font-size: 18px;
+  font-size: 15px;
+
+  @include medium-up {
+    font-size: 18px;
+  }
 }
 
 p, ul, ol, blockquote {
@@ -36,7 +40,8 @@ h3 {
 h4 {
   @include h4-size;
   font-weight: 600;
-  margin-bottom: $spacing-l;
+  margin-top: $spacing;
+  margin-bottom: 0;
 }
 
 a {

@@ -1,0 +1,28 @@
+.block-values {
+  position: relative;
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__image {
+    margin-bottom: 30px;
+    // @include medium-down {
+    //   float: left;
+    //   width: 80px;
+    //   padding-right: 30px
+    // }
+  }
+
+  &__body {
+    // margin-left: 80px;
+    @include medium-up {
+      padding-right: 50px;
+      margin-left: 0;
+    }
+  }
+}

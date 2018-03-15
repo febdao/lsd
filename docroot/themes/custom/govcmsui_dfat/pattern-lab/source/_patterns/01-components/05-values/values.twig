@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 block-values">
+      <div class="row">
+        {% for item in values %}
+          <div class="col-md">
+            <div class="block-values__item row">
+              <div class="block-values__image  col-3 col-md-12">
+                {{ item.image }}
+              </div>
+              <div class="block-values__content  col-9 col-md-12">
+                <h4 class="block-values__title">{{ item.title }}</h4>
+                <div class="block-values__body">{{ item.body }}</div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
