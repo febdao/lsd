@@ -1,1 +1,67 @@
 // Place custom Drupal style here
+.front {
+  .block-values {
+    @include medium-up {
+      &:before {
+        content: "";
+        height: 252px;
+        width: 78px;
+        background-image: url(../images/bg-home.png);
+        background-size: 115px 252px;
+        background-position: left top;
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+      }
+    }
+  }
+
+  .block-cta.image--left .bg--yellow {
+    @include medium-up {
+      &:before {
+        content: "";
+        height: 252px;
+        width: 78px;
+        background-image: url(../images/bg-home.png);
+        background-size: 115px 252px;
+        background-position: right top;
+        position: absolute;
+        top: 60%;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+  .block-cta.image--right .bg--gray {
+    @include medium-up {
+      &:before {
+        content: "";
+        height: 252px;
+        width: 78px;
+        background-image: url(../images/bg-home.png);
+        background-size: 115px 252px;
+        background-position: right top;
+        position: absolute;
+        bottom: 80%;
+        right: 0;
+        z-index: -1;
+      }
+    }
+  }
+  .block-cta.image--left .bg--white {
+    @include medium-up {
+      &:before {
+        content: "";
+        height: 28.5px;
+        width: 295px;
+        background-image: url(../images/decor-bar-revert.png);
+        background-size: 295px 57px;
+        background-position: left top;
+        position: absolute;
+        top: 42px;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+}
