@@ -1,0 +1,33 @@
+{
+  "cta": {
+    "bgClasses": "bg--gray",
+    "imagePosition": "image--right",
+    "image": {
+      "include()": {
+        "pattern": "base-elements-image",
+        "with": {
+          "image": {
+            "src": "/images/photo-1.png",
+            "alt": "DFAT image"
+          }
+        },
+        "only": true
+      }
+    },
+    "title": "Frontier Innovators",
+    "body": "Capital flows for impact investment in the Indo-Pacific lag behind other emerging economies. The Frontier Capital intervention aims to increase interest in social enterprise investment in the region, create more co-investment, and reduce the costs of doing business.",
+    "link": {
+      "include()": {
+        "pattern": "base-elements-link",
+        "with": {
+          "link": {
+            "class": "btn",
+            "href": "#",
+            "text": "Read more"
+          }
+        },
+        "only": true
+      }
+    }
+  }
+}
