@@ -10,7 +10,7 @@ input[type='submit'] {
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
-  padding: 5px 20px;
+  padding: 9px 20px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -33,6 +33,18 @@ input[type='submit'] {
   &--white {
     color: $white;
     border-color: $white;
+  }
+
+  &--soon {
+    padding: 0;
+    border-color: transparent;
+    opacity: 0.4;
+    margin-top: -30px;
+
+    &:hover {
+      border-bottom-color: inherit;
+      background-color: transparent;
+    }
   }
 }
 

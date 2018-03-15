@@ -2,11 +2,14 @@
   $root: &;
 
   position: relative;
+  @include medium-up {
+    margin-top: 30px;
+  }
 
   &__image {
     margin-right: 20px;
     @include medium-up {
-      width: 42%;
+      width: 43%;
       position: absolute;
       z-index: 1;
       top: 50%;
@@ -27,7 +30,8 @@
     margin-bottom: 13px;
 
     @include medium-up {
-      margin-bottom: 30px;
+      margin-bottom: 55px;
+      line-height: 25px;
     }
   }
 
@@ -41,7 +45,7 @@
 
     @include medium-up {
       padding-top: 100px;
-      padding-bottom: 100px;
+      padding-bottom: 80px;
       padding-left: 175px;
       padding-right: 80px;
       margin-left: 33.33%;
@@ -56,7 +60,7 @@
       margin-right: 20px;
       @include medium-up {
         margin-left: 0;
-        padding-left: 80px;
+        padding-left: 97px;
         padding-right: 175px;
         margin-right: 33.33%;
       }

@@ -74,3 +74,16 @@
     background-color: $grey-dark;
   }
 }
+
+// Reset the container base on design
+.container {
+  @include large-up {
+    max-width: 970px;
+  }
+}
+
+// Reset padding
+.col-nopadding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

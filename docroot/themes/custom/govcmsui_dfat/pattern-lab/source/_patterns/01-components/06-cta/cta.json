@@ -1,7 +1,7 @@
 {
   "cta": {
-    "bgClasses": "bg--gray",
-    "imagePosition": "image--right",
+    "bgClasses": "bg--yellow",
+    "imagePosition": "image--left",
     "image": {
       "include()": {
         "pattern": "base-elements-image",
@@ -15,7 +15,7 @@
       }
     },
     "title": "Frontier Innovators",
-    "body": "Capital flows for impact investment in the Indo-Pacific lag behind other emerging economies. The Frontier Capital intervention aims to increase interest in social enterprise investment in the region, create more co-investment, and reduce the costs of doing business.",
+    "body": "Frontier Innovators supports high potential social enterprises in the region. An award of up to $150,000 will be provided to 15 social innovators to promote growth in their businesses, as well as a range of business development support services.",
     "link": {
       "include()": {
         "pattern": "base-elements-link",

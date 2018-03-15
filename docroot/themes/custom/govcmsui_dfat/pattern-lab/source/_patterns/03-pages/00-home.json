@@ -18,12 +18,136 @@
           "items": [
             {
               "include()": {
-                "pattern": "base-elements-headings"
+                "pattern": "components-video-banner"
               }
             },
             {
               "include()": {
-                "pattern": "base-elements-paragraph"
+                "pattern": "components-rich-content"
+              }
+            },
+            {
+              "include()": {
+                "pattern": "components-values"
+              }
+            },
+            {
+              "include()": {
+                "pattern": "components-cta"
+              }
+            },
+            {
+              "include()": {
+                "pattern": "components-cta",
+                "with": {
+                  "cta": {
+                    "bgClasses": "bg--white",
+                    "imagePosition": "image--right",
+                    "image": {
+                      "include()": {
+                        "pattern": "base-elements-image",
+                        "with": {
+                          "image": {
+                            "src": "/images/photo-2.png",
+                            "alt": "DFAT image"
+                          }
+                        },
+                        "only": true
+                      }
+                    },
+                    "title": "Frontier Incubators",
+                    "body": "Frontier Incubators develops mentoring relationships between fledgling enabling services  and high-performing global enabling services. This mentoring strengthens the quality and results of emerging business enabling services in the Indo-Pacific region.",
+                    "link": {
+                      "include()": {
+                        "pattern": "base-elements-link",
+                        "with": {
+                          "link": {
+                            "class": "btn btn--soon",
+                            "href": "#",
+                            "text": "Launching soon"
+                          }
+                        },
+                        "only": true
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "include()": {
+                "pattern": "components-cta",
+                "with": {
+                  "cta": {
+                    "bgClasses": "bg--white",
+                    "imagePosition": "image--left",
+                    "image": {
+                      "include()": {
+                        "pattern": "base-elements-image",
+                        "with": {
+                          "image": {
+                            "src": "/images/photo-3.png",
+                            "alt": "DFAT image"
+                          }
+                        },
+                        "only": true
+                      }
+                    },
+                    "title": "Frontier Impact Brokers",
+                    "body": "Frontier Impact Brokers assist social innovators by helping them connect with potential investors including fund managers, philanthropists and angel investors. This helps social enterprises to attract the financial support necessary to establish and grow their businesses.",
+                    "link": {
+                      "include()": {
+                        "pattern": "base-elements-link",
+                        "with": {
+                          "link": {
+                            "class": "btn btn--soon",
+                            "href": "#",
+                            "text": "Launching soon"
+                          }
+                        },
+                        "only": true
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "include()": {
+                "pattern": "components-cta",
+                "with": {
+                  "cta": {
+                    "bgClasses": "bg--gray",
+                    "imagePosition": "image--right",
+                    "image": {
+                      "include()": {
+                        "pattern": "base-elements-image",
+                        "with": {
+                          "image": {
+                            "src": "/images/photo-4.png",
+                            "alt": "DFAT image"
+                          }
+                        },
+                        "only": true
+                      }
+                    },
+                    "title": "Frontier Capital",
+                    "body": "Capital flows for impact investment in the Indo-Pacific lag behind other emerging economies. The Frontier Capital intervention aims to increase interest in social enterprise investment in the region, create more co-investment, and reduce the costs of doing business.",
+                    "link": {
+                      "include()": {
+                        "pattern": "base-elements-link",
+                        "with": {
+                          "link": {
+                            "class": "btn btn--soon",
+                            "href": "#",
+                            "text": "Launching soon"
+                          }
+                        },
+                        "only": true
+                      }
+                    }
+                  }
+                }
               }
             }
           ]

@@ -62,6 +62,7 @@ a {
 	&:focus,
 	&:hover {
 		text-decoration: none !important;
+    background-color: transparent;
 	}
 }
 // Your average content link (and page footer)
@@ -93,6 +94,7 @@ body > footer {
 			&:active {
 				text-decoration: none;
         color: inherit;
+        background-color: transparent;
 			}
 		}
 	}

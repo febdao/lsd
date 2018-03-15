@@ -1,9 +1,20 @@
 .feature-bottom {
-  padding-top: 240px;
+  padding-top: 340px;
   padding-bottom: 25px;
 
   @include medium-up {
     padding-top: 340px;
-    padding-bottom: 75px;
+    padding-bottom: 60px;
+  }
+
+  .main + & {
+    margin-top: -265px;
+    @include medium-up {
+      margin-top: -213px;
+    }
+  }
+
+  .block-title {
+    white-space: nowrap;
   }
 }

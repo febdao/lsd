@@ -1,5 +1,9 @@
 .block-values {
   position: relative;
+  margin-top: 62px;
+  @include medium-up {
+    margin-bottom: 65px;
+  }
 
   &__item {
     margin-bottom: 20px;
@@ -11,18 +15,13 @@
 
   &__image {
     margin-bottom: 30px;
-    // @include medium-down {
-    //   float: left;
-    //   width: 80px;
-    //   padding-right: 30px
-    // }
   }
 
   &__body {
-    // margin-left: 80px;
     @include medium-up {
-      padding-right: 50px;
+      padding-right: 10px;
       margin-left: 0;
+      line-height: 24px;
     }
   }
 }

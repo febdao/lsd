@@ -1,0 +1,13 @@
+.block-social {
+  @include medium-up {
+    margin-left: -8px;
+  }
+
+  &__items {
+    margin-top: 40px;
+  }
+
+  &__item {
+    margin-bottom: 14px;
+  }
+}

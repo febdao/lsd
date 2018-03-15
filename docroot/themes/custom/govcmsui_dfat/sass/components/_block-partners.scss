@@ -1,7 +1,7 @@
 .block-partners {
   margin-bottom: 25px;
   @include medium-up {
-    margin-bottom: 95px;
+    margin-bottom: 80px;
   }
 
   &__items {
@@ -11,7 +11,7 @@
   .block-title {
     @include medium-up {
       margin-top: 75px;
-      margin-bottom: 45px;
+      margin-bottom: 30px;
     }
   }
 }

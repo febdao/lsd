@@ -1,4 +1,6 @@
 .header {
+  padding-bottom: 17px;
+
   &__left,
   &__right {
     max-width: 40%;
@@ -10,6 +12,8 @@
 
   &__right {
     float: right;
+    margin-top: 15px;
+    margin-right: 16px;
   }
 
   &__sublogo {
