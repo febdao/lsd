@@ -1,0 +1,63 @@
+<div class="feature-bottom bg--dark text--white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 offset-md-1">
+        <div class="block-newsletter">
+          <h2 class="block-title">Sign up to the newsletter</h2>
+          <form action="" class="block-newsletter__form">
+            <input type="text" placeholder="Your email" name="" value="" class="block-newsletter__text"/>
+            <button type="button" class="btn btn--white" name="button" class="block-newsletter__button">Sign up</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-3 offset-md-3">
+        <div class="block-social">
+          <h2 class="block-title">{{ social.title }}</h2>
+          <ul class="block-social__items reset-list">
+            {% for item in social.items %}
+              <li class="block-social__item"><i class="dfat-icon">{{ item.icon }}</i><a href="{{ item.uri }}">{{ item.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="block-partners">
+      <h2 class="block-title offset-md-1">{{ partners.title }}</h2>
+      <ul class="block-partners__items reset-list row">
+        {% for item in partners.items %}
+          <li class="block-partners__item {{ item.classes }}">
+            <a href="{{ item.uri }}" title="{{ item.name }}" target="_blank">
+              <img src="{{ item.image }}" alt="{{ item.name }}"/>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4 order-md-last">
+            <div class="block-menu-footer">
+              <ul class="block-menu-footer__items reset-list">
+                {% for item in menuFooter %}
+                  <li class="block-menu-footer__item">
+                    <a href="{{ item.uri }}">{{ item.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="block-copyright">
+              {{ copyRight }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
